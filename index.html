@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethiopian Universities Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🇪🇹 Ethiopian Universities Management System</h1>
+  <p>Ministry of Education — Demonstration Administration System</p>
+</header>
+
+<nav>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#universities">Universities</a>
+  <a href="#students">Students</a>
+  <a href="#lecturers">Lecturers</a>
+  <a href="#staff">Staff</a>
+  <a href="#history">History</a>
+</nav>
+
+<main>
+<section id="dashboard">
+  <h2>Dashboard</h2>
+  <div class="cards">
+    <div class="card"><span id="universityCount">0</span><small>Universities</small></div>
+    <div class="card"><span id="studentCount">0</span><small>Students</small></div>
+    <div class="card"><span id="lecturerCount">0</span><small>Lecturers</small></div>
+    <div class="card"><span id="staffCount">0</span><small>Staff</small></div>
+  </div>
+</section>
+
+<section id="universities">
+<h2>University Registration</h2>
+<form id="universityForm">
+<input name="name" placeholder="University name" required>
+<input name="city" placeholder="City" required>
+<input name="region" placeholder="Region" required>
+<input name="established" type="number" placeholder="Established year">
+<select name="status"><option>Active</option><option>Inactive</option></select>
+<button type="submit">Register University</button>
+</form>
+<input id="universitySearch" class="search" placeholder="Search universities...">
+<div class="table-wrap">
+<table><thead><tr><th>ID</th><th>Name</th><th>City</th><th>Region</th><th>Year</th><th>Status</th><th>Action</th></tr></thead>
+<tbody id="universitiesBody"></tbody></table>
+</div>
+</section>
+
+<section id="students">
+<h2>Student Registration</h2>
+<form id="studentForm">
+<input name="student_id" placeholder="Student ID" required>
+<input name="full_name" placeholder="Full name" required>
+<select name="gender"><option>Male</option><option>Female</option><option>Other</option></select>
+<input name="university_id" type="number" placeholder="University ID">
+<input name="faculty" placeholder="Faculty">
+<input name="department" placeholder="Department">
+<input name="program" placeholder="Program">
+<input name="year_level" placeholder="Year level">
+<input name="phone" placeholder="Phone">
+<input name="email" type="email" placeholder="Email">
+<button type="submit">Register Student</button>
+</form>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Student ID</th><th>Name</th><th>University</th><th>Program</th><th>Action</th></tr></thead><tbody id="studentsBody"></tbody></table></div>
+</section>
+
+<section id="lecturers">
+<h2>Lecturer Registration</h2>
+<form id="lecturerForm">
+<input name="employee_id" placeholder="Employee ID" required>
+<input name="full_name" placeholder="Full name" required>
+<select name="gender"><option>Male</option><option>Female</option><option>Other</option></select>
+<input name="university_id" type="number" placeholder="University ID">
+<input name="faculty" placeholder="Faculty">
+<input name="department" placeholder="Department">
+<input name="specialization" placeholder="Specialization">
+<input name="academic_rank" placeholder="Academic rank">
+<input name="phone" placeholder="Phone">
+<input name="email" type="email" placeholder="Email">
+<button type="submit">Register Lecturer</button>
+</form>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Employee ID</th><th>Name</th><th>Department</th><th>Rank</th><th>Action</th></tr></thead><tbody id="lecturersBody"></tbody></table></div>
+</section>
+
+<section id="staff">
+<h2>Security Staff / Cleaners</h2>
+<div class="two">
+<form id="securityForm">
+<h3>Security</h3>
+<input name="employee_id" placeholder="Employee ID" required>
+<input name="full_name" placeholder="Full name" required>
+<input name="university_id" type="number" placeholder="University ID">
+<input name="phone" placeholder="Phone">
+<input name="position" placeholder="Position">
+<button type="submit">Register Security Staff</button>
+</form>
+<form id="cleanerForm">
+<h3>Cleaner</h3>
+<input name="employee_id" placeholder="Employee ID" required>
+<input name="full_name" placeholder="Full name" required>
+<input name="university_id" type="number" placeholder="University ID">
+<input name="phone" placeholder="Phone">
+<input name="position" placeholder="Position">
+<button type="submit">Register Cleaner</button>
+</form>
+</div>
+</section>
+
+<section id="history">
+<h2>Previous History / Audit Records</h2>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Action</th><th>Type</th><th>Description</th><th>By</th><th>Date</th></tr></thead><tbody id="historyBody"></tbody></table></div>
+</section>
+</main>
+
+<footer>Educational demonstration project — Ethiopian Universities Management System</footer>
+<script src="script.js"></script>
+</body>
+</html>
